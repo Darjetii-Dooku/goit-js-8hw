@@ -17,9 +17,9 @@ function handlerInp(evt) {
     //     JsformKey.email = evt.target.value
     // }
     JsformKey = {
-        email: evt.currentTarget[0].value,
-        message: evt.currentTarget[1].value
-    }
+        email: evt.currentTarget.elements.email.value,
+        message: evt.currentTarget.elements.message.value
+    };
     localStorage.setItem(JS_STORAGE, JSON.stringify(JsformKey));
 };
 formJS.addEventListener('submit', submitHandler);
