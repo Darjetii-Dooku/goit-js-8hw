@@ -10,11 +10,15 @@ formJS[1].value = JSON.parse(localStorage.getItem(JS_STORAGE)).message;
 }
 
 function handlerInp(evt) {
-    if (evt.target.name === 'message') {
-        JsformKey.message = evt.target.value;
-    }
-    if (evt.target.name === 'email') {
-        JsformKey.email = evt.target.value
+    // if (evt.target.name === 'message') {
+    //     JsformKey.message = evt.target.value;
+    // }
+    // if (evt.target.name === 'email') {
+    //     JsformKey.email = evt.target.value
+    // }
+    JsformKey = {
+        email: evt.currentTarget[0].value,
+        message: evt.currentTarget[1].value
     }
     localStorage.setItem(JS_STORAGE, JSON.stringify(JsformKey));
 };
