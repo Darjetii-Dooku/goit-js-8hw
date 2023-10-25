@@ -20,7 +20,6 @@ function handlerInp(evt) {
         email: formJS.elements.email.value,
         message: formJS.elements.message.value
     };
-    console.log(evt.target)
     localStorage.setItem(JS_STORAGE, JSON.stringify(JsformKey));
 };
 formJS.addEventListener('submit', submitHandler);
